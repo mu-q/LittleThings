@@ -142,6 +142,27 @@
             z-index: 1001;
         }
 
+        .nav-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(102, 126, 234, 0.9);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-button:hover {
+            background: rgba(102, 126, 234, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
         @keyframes pulse {
             0%, 100% {
                 transform: translateX(-50%) scale(1);
@@ -158,6 +179,7 @@
     <button class="sound-toggle" id="soundToggle">🔊 音效开启</button>
     <div class="counter" id="counter">点击次数: 0</div>
     <div class="click-hint">点击页面任意位置播放音效！</div>
+    <a href="zhou_page.html" class="nav-button">👀 神秘小按钮</a>
     
     <div class="container">
         <h1 class="title">Ciallo～(∠・ω< )⌒★</h1>
@@ -172,7 +194,7 @@
         
         // 预加载音效文件
         function loadAudio() {
-            audio = new Audio('/LittleThings/ciallo.m4a');
+            audio = new Audio('/LittleTings/ciallo.m4a');
             audio.preload = 'auto';
             audio.volume = 0.7;
         }
